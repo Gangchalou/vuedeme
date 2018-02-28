@@ -45,7 +45,7 @@ module.exports = {
   },
 
   build: {
-    // Template for index.html
+    // Template for index.comment_page
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
