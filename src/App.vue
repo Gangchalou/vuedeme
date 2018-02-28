@@ -10,8 +10,8 @@
       </div>
     </header>
     <div class="container">
-      '<Add/>'
-      '<List/>'
+      <Add/>
+      <List/>
     </div>
   </div>
 </template>
