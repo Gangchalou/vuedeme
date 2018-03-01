@@ -10,8 +10,8 @@
       </div>
     </header>
     <div class="container">
-      <Add/>
-      <List/>
+      <Add :addComment="addComment"/>
+      <List :comments="comments" :deleteComment="deleteComment"/>
     </div>
   </div>
 </template>
@@ -21,6 +21,23 @@
   import List from './components/List.vue'
 
   export default {
+   data () {
+     return {
+       comments: [
+         {name: 'wun', content: '123'},
+         {name: 'chang', content: '456'},
+         {name: 'lee', content: '789'}
+       ]
+     }
+   },
+    methods: {
+       addComment (comment) {
+         this.comments.unshift(comment)
+       },
+      deleteComment (index) {
+         this.comments.splice(index, 1)
+      }
+    },
     components: {
       Add,
       List
